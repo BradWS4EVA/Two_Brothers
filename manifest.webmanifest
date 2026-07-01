@@ -1,0 +1,16 @@
+{
+  "name": "Two Brothers — It's Just Called Two Brothers",
+  "short_name": "Two Brothers",
+  "description": "Two brothers. A van. A meteor. Giant cat monsters. A tornado. A Mexican armada with weapons made from tomatoes. In: Alaska.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0b1026",
+  "theme_color": "#0b1026",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
