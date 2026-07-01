@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0b1026">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>TWO BROTHERS — It's Just Called Two Brothers</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%; height: 100%;
+    background: #05070f;
+    overflow: hidden;
+    position: fixed;
+    touch-action: none;
+    -webkit-user-select: none; user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+  #game {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    image-rendering: auto;
+    background: #0b1026;
+  }
+  #rotate {
+    display: none;
+    position: fixed; inset: 0;
+    background: #0b1026;
+    color: #e8f0ff;
+    z-index: 10;
+    text-align: center;
+    font-family: system-ui, sans-serif;
+    padding-top: 30vh;
+    font-size: 22px;
+    line-height: 1.6;
+  }
+  @media (orientation: landscape) and (max-height: 480px) {
+    #rotate { display: block; }
+  }
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="rotate">📱<br>Rotate your phone to portrait,<br>bro. Brothers run tall.</div>
+<script src="game.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+  }
+</script>
+</body>
+</html>
